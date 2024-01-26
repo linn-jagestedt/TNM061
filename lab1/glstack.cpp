@@ -210,7 +210,7 @@ int main() {
 
         // Earth
         modelViewStack.rotY(0.2f * time);            // Earth orbit rotation
-        modelViewStack.translate(1.5f, 0.0f, 0.0f);  // Earth orbit radius
+        modelViewStack.translate(1.0f, 0.0f, 0.0f);  // Earth orbit radius
         modelViewStack.push();                       // Save the matrix before the Earth's rotation
 
         modelViewStack.rotY(10.0f * time);                 // Earth's rotation around its axis
@@ -224,8 +224,8 @@ int main() {
 
         modelViewStack.pop();  // Restore the matrix we saved above
 
-        modelViewStack.rotY(2.0f * time);            // moon orbit rotation
-        modelViewStack.translate(0.5f, 0.0f, 0.0f);  // moon orbit radius
+        modelViewStack.rotY(1.0f * time);            // moon orbit rotation
+        modelViewStack.translate(0.4f, 0.0f, 0.0f);  // moon orbit radius
         modelViewStack.rotY(0 * time);           // moon's rotation around its axis
         modelViewStack.rotX(static_cast<float>(-M_PI_2));  // Orient the poles along Y axis instead of Z
         modelViewStack.scale(0.1f);                  // moon unit sphere to radius 0.1
